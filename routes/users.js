@@ -9,8 +9,8 @@ router.get("/new", (req, res) => {
   res.send("User new form");
 });
 
-router.post("/create", function (req, res) {
-  res.send("create user");
+router.get("/create", (req, res) => {
+  res.send("Create user");
 });
 
 // Chain together all requests
