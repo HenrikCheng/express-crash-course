@@ -14,11 +14,16 @@ app.get("/", (req, res) => {
   res.render("index", { text: " will cause a exception" });
 });
 
+app.get("/posts", (req, res) => {
+  res.render("posts");
+});
+
 const userRouter = require("./routes/users");
 app.use("/users", userRouter);
 
 function logger(req, res, next) {
   console.log("request", req.originalUrl);
+  next();
 }
 
 app.listen(3000);
