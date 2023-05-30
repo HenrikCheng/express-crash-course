@@ -13,12 +13,7 @@ app.get("/", (req, res) => {
   res.render("index", { text: " will cause a exception" });
 });
 
-app.get("/users", (req, res) => {
-  res.send("list users");
-});
-
-app.get("/users/new", (req, res) => {
-  res.send("create user");
-});
+const userRouter = require("./routes/users");
+app.use("/users", userRouter);
 
 app.listen(3000);
