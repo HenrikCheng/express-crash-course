@@ -8,8 +8,10 @@
   </head>
   <body>
     <h1>I'm a html file</h1>
-    <p>If text is undefined, <%= text %> <%= 2+2 %></p>
-    <%= locals.text123 || "this way prevents crashes when variable is undefined"
-    %>
+    <p>If text is undefined, <%= text %></p>
+    <p>
+      <%= locals.text123 || "backup msg to prevent crash when var is undef" %>
+    </p>
+    <%= 2+2 %>
   </body>
 </html>
